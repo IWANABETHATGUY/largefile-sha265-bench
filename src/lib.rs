@@ -17,5 +17,5 @@ pub fn sha265(buffer: Vec<u8>) -> Vec<u8> {
     // write input message
     hasher.update(buffer);
     let result = hasher.finalize();
-    result.as_slice().into()
+    result.as_slice().to_vec()
 }
